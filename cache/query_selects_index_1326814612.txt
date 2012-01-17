@@ -1,0 +1,60 @@
+
+
+I AM HERE index
+sidebox: 
+
+Explain 
+select languages_id, name, code, image, directory
+                          from zen_languages 
+                          order by sort_order;
+
+
+
+I AM HERE index
+sidebox: 
+
+Explain 
+select template_dir
+            from zen_template_select
+            where template_language = 0;
+
+
+
+I AM HERE index
+sidebox: 
+
+Explain 
+select template_dir
+            from zen_template_select
+            where template_language = '1';
+
+
+
+I AM HERE index
+sidebox: 
+
+Explain 
+select code
+                      from zen_currencies
+                      where code = 'USD' LIMIT 1;
+
+
+
+I AM HERE index
+sidebox: 
+
+Explain 
+select count(*) as count
+                              from zen_whos_online
+                              where session_id = 'eh5il6etjllhcig47jhd7cuor7' and ip_address='74.190.140.173';
+
+
+
+I AM HERE index
+sidebox: 
+
+Explain 
+select banners_id, date_scheduled
+                      from zen_banners
+                      where date_scheduled != 'NULL';
+

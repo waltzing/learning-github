@@ -1,0 +1,23 @@
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select banners_id, date_scheduled
+                      from zen_banners
+                      where date_scheduled != 'NULL';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select b.banners_id, b.expires_date, b.expires_impressions,
+                             sum(bh.banners_shown) as banners_shown
+                      from zen_banners b, zen_banners_history bh
+                      where b.status = 1
+                      and b.banners_id = bh.banners_id
+                      group by b.banners_id, b.expires_date, b.expires_impressions;
+

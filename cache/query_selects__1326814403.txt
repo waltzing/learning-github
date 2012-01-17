@@ -1,0 +1,846 @@
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_key as cfgKey, configuration_value as cfgValue
+                          from zen_product_type_layout;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select value
+              from zen_sessions
+              where sesskey = 'uiuopa60oko0srhjb0iii4emt1'
+              and expiry > '1326814403';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select template_dir from zen_template_select where template_language in (1, 0) order by template_language DESC;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select banners_id, date_scheduled
+                      from zen_banners
+                      where date_scheduled != 'NULL';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select b.banners_id, b.expires_date, b.expires_impressions,
+                             sum(bh.banners_shown) as banners_shown
+                      from zen_banners b, zen_banners_history bh
+                      where b.status = 1
+                      and b.banners_id = bh.banners_id
+                      group by b.banners_id, b.expires_date, b.expires_impressions;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select specials_id, products_id
+                       from zen_specials
+                       where status = '0'
+                       and (((specials_date_available <= 20120117 and specials_date_available != '0001-01-01') and (expires_date > 20120117))
+                       or ((specials_date_available <= 20120117 and specials_date_available != '0001-01-01') and (expires_date = '0001-01-01'))
+                       or (specials_date_available = '0001-01-01' and expires_date > 20120117))
+                       ;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select specials_id, products_id
+                       from zen_specials
+                       where status = '1'
+                       and (20120117 < specials_date_available and specials_date_available != '0001-01-01')
+                       ;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select specials_id, products_id
+                       from zen_specials
+                       where status = '1'
+                       and ((20120117 >= expires_date and expires_date != '0001-01-01')
+                       or (20120117 < specials_date_available and specials_date_available != '0001-01-01'));
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select featured_id
+                       from zen_featured
+                       where status = '0'
+                       and (((featured_date_available <= 20120117 and featured_date_available != '0001-01-01') and (expires_date > 20120117))
+                       or ((featured_date_available <= 20120117 and featured_date_available != '0001-01-01') and (expires_date = '0001-01-01'))
+                       or (featured_date_available = '0001-01-01' and expires_date > 20120117))
+                       ;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select featured_id
+                       from zen_featured
+                       where status = '1'
+                       and (20120117 < featured_date_available and featured_date_available != '0001-01-01')
+                       ;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select featured_id
+                       from zen_featured
+                       where status = '1'
+                       and ((20120117 >= expires_date and expires_date != '0001-01-01')
+                       or (20120117 < featured_date_available and featured_date_available != '0001-01-01'));
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select sale_id
+                       from zen_salemaker_sales
+                       where sale_status = '0'
+                       and (((sale_date_start <= 20120117 and sale_date_start != '0001-01-01') and (sale_date_end > 20120117))
+                       or ((sale_date_start <= 20120117 and sale_date_start != '0001-01-01') and (sale_date_end = '0001-01-01'))
+                       or (sale_date_start = '0001-01-01' and sale_date_end > 20120117))
+                       ;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select sale_id
+                       from zen_salemaker_sales
+                       where sale_status = '1'
+                       and (20120117 < sale_date_start and sale_date_start != '0001-01-01')
+                       ;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select sale_id
+                       from zen_salemaker_sales
+                       where sale_status = '1'
+                       and ((20120117 >= sale_date_end and sale_date_end != '0001-01-01')
+                       or (20120117 < sale_date_start and sale_date_start != '0001-01-01'));
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_value from zen_configuration where configuration_key='ADMIN_DEMO';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_admin where admin_name='demo' or admin_name='Admin';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select code, title, symbol_left, symbol_right, decimal_point, 
+                                         thousands_point, decimal_places, value 
+                                  from zen_currencies;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_product_types;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select languages_id, name, code, image, directory
+                               from zen_languages order by sort_order;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+SELECT project_version_major, project_version_minor FROM zen_project_version WHERE project_version_key = 'Zen-Cart Database';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_value from zen_configuration where configuration_key='MODULE_PAYMENT_INSTALLED';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_value from zen_configuration where configuration_key='MODULE_SHIPPING_INSTALLED';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_coupon_gv_queue where release_flag='N';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_group_id as cgID, 
+                                                       configuration_group_title as cgTitle 
+                                                from zen_configuration_group 
+                                                where visible = '1' order by sort_order;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as count
+                             from zen_categories
+                             where parent_id = '0';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+                                from zen_products p, zen_products_to_categories p2c
+                                where p.products_id = p2c.products_id
+                                and p.products_status = 1
+                                and p2c.categories_id = '0' limit 1;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select cd.categories_name, c.parent_id
+                                from zen_categories c, zen_categories_description cd
+                                where c.categories_id = '0'
+                                and c.categories_id = cd.categories_id
+                                and cd.language_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select c.categories_id, cd.categories_name, c.parent_id
+                                from zen_categories c, zen_categories_description cd
+                                where c.categories_id = cd.categories_id
+                                and cd.language_id = '1'
+                                and c.parent_id = '0'
+                                order by c.sort_order, cd.categories_name;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select c.categories_id, cd.categories_name, c.parent_id
+                                from zen_categories c, zen_categories_description cd
+                                where c.categories_id = cd.categories_id
+                                and cd.language_id = '1'
+                                and c.parent_id = '2'
+                                order by c.sort_order, cd.categories_name;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select c.categories_id, cd.categories_name, c.parent_id
+                                from zen_categories c, zen_categories_description cd
+                                where c.categories_id = cd.categories_id
+                                and cd.language_id = '1'
+                                and c.parent_id = '3'
+                                order by c.sort_order, cd.categories_name;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select c.categories_id, cd.categories_name, c.parent_id
+                                from zen_categories c, zen_categories_description cd
+                                where c.categories_id = cd.categories_id
+                                and cd.language_id = '1'
+                                and c.parent_id = '4'
+                                order by c.sort_order, cd.categories_name;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select c.categories_id, cd.categories_name, c.parent_id
+                                from zen_categories c, zen_categories_description cd
+                                where c.categories_id = cd.categories_id
+                                and cd.language_id = '1'
+                                and c.parent_id = '1'
+                                order by c.sort_order, cd.categories_name;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select c.categories_id, cd.categories_name, cd.categories_description, c.categories_image,
+                                         c.parent_id, c.sort_order, c.date_added, c.last_modified,
+                                         c.categories_status
+                                  from zen_categories c, zen_categories_description cd
+                                  where c.parent_id = '0'
+                                  and c.categories_id = cd.categories_id
+                                  and cd.language_id = '1' order by c.sort_order, cd.categories_name;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select sale_id, sale_status, sale_name, sale_categories_all, sale_deduction_value, sale_deduction_type, sale_pricerange_from, sale_pricerange_to, sale_specials_condition, sale_categories_selected, sale_date_start, sale_date_end, sale_date_added, sale_date_last_modified, sale_date_status_change from zen_salemaker_sales where sale_status='1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+                           from zen_products p, zen_products_to_categories p2c
+                           where p.products_id = p2c.products_id
+                           and p2c.categories_id = '2';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '2';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+                             from zen_products p, zen_products_to_categories p2c
+                             where p.products_id = p2c.products_id
+                             and p.products_status = 1
+                             and p2c.categories_id = '2';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '2';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select p.products_id
+                           from zen_products p, zen_products_to_categories p2c
+                           where p.products_id = p2c.products_id
+                           and p2c.categories_id = '2';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_products_to_categories where products_id=1;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_products_to_categories where products_id=2;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '2';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select metatags_keywords
+                              from zen_meta_tags_categories_description
+                              where categories_id = '2'
+                              and language_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select metatags_description
+                              from zen_meta_tags_categories_description
+                              where categories_id = '2'
+                              and language_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select sale_id, sale_status, sale_name, sale_categories_all, sale_deduction_value, sale_deduction_type, sale_pricerange_from, sale_pricerange_to, sale_specials_condition, sale_categories_selected, sale_date_start, sale_date_end, sale_date_added, sale_date_last_modified, sale_date_status_change from zen_salemaker_sales where sale_status='1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+                           from zen_products p, zen_products_to_categories p2c
+                           where p.products_id = p2c.products_id
+                           and p2c.categories_id = '3';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '3';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+                             from zen_products p, zen_products_to_categories p2c
+                             where p.products_id = p2c.products_id
+                             and p.products_status = 1
+                             and p2c.categories_id = '3';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '3';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select p.products_id
+                           from zen_products p, zen_products_to_categories p2c
+                           where p.products_id = p2c.products_id
+                           and p2c.categories_id = '3';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_products_to_categories where products_id=3;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_products_to_categories where products_id=4;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '3';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select metatags_keywords
+                              from zen_meta_tags_categories_description
+                              where categories_id = '3'
+                              and language_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select metatags_description
+                              from zen_meta_tags_categories_description
+                              where categories_id = '3'
+                              and language_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select sale_id, sale_status, sale_name, sale_categories_all, sale_deduction_value, sale_deduction_type, sale_pricerange_from, sale_pricerange_to, sale_specials_condition, sale_categories_selected, sale_date_start, sale_date_end, sale_date_added, sale_date_last_modified, sale_date_status_change from zen_salemaker_sales where sale_status='1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+                           from zen_products p, zen_products_to_categories p2c
+                           where p.products_id = p2c.products_id
+                           and p2c.categories_id = '4';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '4';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+                             from zen_products p, zen_products_to_categories p2c
+                             where p.products_id = p2c.products_id
+                             and p.products_status = 1
+                             and p2c.categories_id = '4';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '4';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select p.products_id
+                           from zen_products p, zen_products_to_categories p2c
+                           where p.products_id = p2c.products_id
+                           and p2c.categories_id = '4';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_products_to_categories where products_id=5;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '4';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select metatags_keywords
+                              from zen_meta_tags_categories_description
+                              where categories_id = '4'
+                              and language_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select metatags_description
+                              from zen_meta_tags_categories_description
+                              where categories_id = '4'
+                              and language_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select sale_id, sale_status, sale_name, sale_categories_all, sale_deduction_value, sale_deduction_type, sale_pricerange_from, sale_pricerange_to, sale_specials_condition, sale_categories_selected, sale_date_start, sale_date_end, sale_date_added, sale_date_last_modified, sale_date_status_change from zen_salemaker_sales where sale_status='1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+                           from zen_products p, zen_products_to_categories p2c
+                           where p.products_id = p2c.products_id
+                           and p2c.categories_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+                             from zen_products p, zen_products_to_categories p2c
+                             where p.products_id = p2c.products_id
+                             and p.products_status = 1
+                             and p2c.categories_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select p.products_id
+                           from zen_products p, zen_products_to_categories p2c
+                           where p.products_id = p2c.products_id
+                           and p2c.categories_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_products_to_categories where products_id=6;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select metatags_keywords
+                              from zen_meta_tags_categories_description
+                              where categories_id = '1'
+                              and language_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select metatags_description
+                              from zen_meta_tags_categories_description
+                              where categories_id = '1'
+                              and language_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total  from zen_products p, zen_products_description pd, zen_products_to_categories p2c                                 where p.products_id = pd.products_id                                 and pd.language_id = '1'                                 and p.products_id = p2c.products_id                                 and p2c.categories_id = '0';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select p.products_type, p.products_id, pd.products_name, p.products_quantity,                                        p.products_image, p.products_price, p.products_date_added,                                        p.products_last_modified, p.products_date_available,                                        p.products_status, p.products_model,                                        p.products_quantity_order_min, p.products_quantity_order_units, p.products_priced_by_attribute,                                        p.product_is_free, p.product_is_call, p.products_quantity_mixed, p.product_is_always_free_shipping,                                        p.products_quantity_order_max, p.products_sort_order                                 from zen_products p, zen_products_description pd, zen_products_to_categories p2c                                 where p.products_id = pd.products_id                                 and pd.language_id = '1'                                 and p.products_id = p2c.products_id                                 and p2c.categories_id = '0' order by p.products_sort_order, pd.products_name limit 0, 10;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select type_id, type_name from zen_product_types;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as products_errors from zen_products_to_categories where categories_id = 0;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+SELECT * from zen_project_version WHERE project_version_key = 'Zen-Cart Database' ORDER BY project_version_date_applied DESC LIMIT 1;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+              from zen_sessions
+              where sesskey = 'uiuopa60oko0srhjb0iii4emt1';
+

@@ -1,0 +1,210 @@
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='4';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='DEFAULT_PRODUCT_ATTRIBUTE_IS_FREE';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='4';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='DEFAULT_PRODUCT_ATTRIBUTES_DISPLAY_ONLY';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='4';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='DEFAULT_PRODUCT_ATTRIBUTES_DEFAULT';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='4';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='DEFAULT_PRODUCT_ATTRIBUTES_DISCOUNTED';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='4';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='DEFAULT_PRODUCT_ATTRIBUTES_PRICE_BASE_INCLUDED';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='4';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='DEFAULT_PRODUCT_ATTRIBUTES_REQUIRED';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='4';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='DEFAULT_PRODUCT_PRICE_PREFIX';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='4';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='DEFAULT_PRODUCT_PRODUCTS_ATTRIBUTES_WEIGHT_PREFIX';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+SELECT * from zen_project_version WHERE project_version_key = 'Zen-Cart Database' ORDER BY project_version_date_applied DESC LIMIT 1;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+              from zen_sessions
+              where sesskey = 'sjpnkna68m0abarrvae3jti620';
+

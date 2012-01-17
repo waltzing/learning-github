@@ -1,0 +1,28 @@
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as products_count
+                                             from zen_products
+                                             where products_type = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+SELECT * from zen_project_version WHERE project_version_key = 'Zen-Cart Database' ORDER BY project_version_date_applied DESC LIMIT 1;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+              from zen_sessions
+              where sesskey = 'uiuopa60oko0srhjb0iii4emt1';
+

@@ -1,0 +1,18 @@
+
+
+I AM HERE index
+sidebox: 
+
+Explain 
+select * from zen_ezpages where status_footer = 1 and footer_sort_order > 0 order by footer_sort_order, pages_title;
+
+
+
+I AM HERE index
+sidebox: 
+
+Explain 
+select count(*) as total
+              from zen_sessions
+              where sesskey = 'e4tq2ot1hp4crur7n4c9qndnp6';
+

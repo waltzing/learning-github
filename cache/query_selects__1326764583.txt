@@ -1,0 +1,230 @@
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='ezpages.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='featured.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='information.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='languages.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='manufacturer_info.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='manufacturers.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='more_information.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='music_genres.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='order_history.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='product_notifications.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='record_companies.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='reviews.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='search.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='search_header.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='shopping_cart.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='specials.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='tell_a_friend.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='whats_new.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_name='whos_online.php' and layout_template='digitalshop';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select languages_id, name, code, image, directory
+                               from zen_languages order by sort_order;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+SELECT project_version_major, project_version_minor FROM zen_project_version WHERE project_version_key = 'Zen-Cart Database';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_value from zen_configuration where configuration_key='MODULE_PAYMENT_INSTALLED';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_value from zen_configuration where configuration_key='MODULE_SHIPPING_INSTALLED';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_coupon_gv_queue where release_flag='N';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_group_id as cgID, 
+                                                       configuration_group_title as cgTitle 
+                                                from zen_configuration_group 
+                                                where visible = '1' order by sort_order;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select layout_id, layout_box_name, layout_box_status, layout_box_location, layout_box_sort_order, layout_box_sort_order_single, layout_box_status_single from zen_layout_boxes where (layout_template='digitalshop' and layout_box_name NOT LIKE '%ezpages_bar%') order by  layout_box_location, layout_box_sort_order;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+SELECT * from zen_project_version WHERE project_version_key = 'Zen-Cart Database' ORDER BY project_version_date_applied DESC LIMIT 1;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+              from zen_sessions
+              where sesskey = 'uiuopa60oko0srhjb0iii4emt1';
+

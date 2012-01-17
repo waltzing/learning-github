@@ -1,0 +1,152 @@
+
+
+I AM HERE product_reviews_write
+sidebox: 
+
+Explain 
+select template_dir
+            from zen_template_select
+            where template_language = 0;
+
+
+
+I AM HERE product_reviews_write
+sidebox: 
+
+Explain 
+select template_dir
+            from zen_template_select
+            where template_language = '1';
+
+
+
+I AM HERE product_reviews_write
+sidebox: 
+
+Explain 
+select code
+                      from zen_currencies
+                      where code = 'USD' LIMIT 1;
+
+
+
+I AM HERE product_reviews_write
+sidebox: 
+
+Explain 
+select count(*) as count
+                              from zen_whos_online
+                              where session_id = 'eh5il6etjllhcig47jhd7cuor7' and ip_address='74.190.141.129';
+
+
+
+I AM HERE product_reviews_write
+sidebox: 
+
+Explain 
+select banners_id, date_scheduled
+                      from zen_banners
+                      where date_scheduled != 'NULL';
+
+
+
+I AM HERE product_reviews_write
+sidebox: 
+
+Explain 
+select b.banners_id, b.expires_date, b.expires_impressions,
+                             sum(bh.banners_shown) as banners_shown
+                      from zen_banners b, zen_banners_history bh
+                      where b.status = 1
+                      and b.banners_id = bh.banners_id
+                      group by b.banners_id, b.expires_date, b.expires_impressions;
+
+
+
+I AM HERE product_reviews_write
+sidebox: 
+
+Explain 
+select categories_name
+                           from zen_categories_description
+                           where categories_id = '2'
+                           and language_id = '1';
+
+
+
+I AM HERE product_reviews_write
+sidebox: 
+
+Explain 
+select *
+        from zen_get_terms_to_filter;
+
+
+
+I AM HERE product_reviews_write
+sidebox: 
+
+Explain 
+select products_name
+                   from zen_products_description
+                   where products_id = '2'
+             and language_id = '1';
+
+
+
+I AM HERE product_reviews_write
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id = '2';
+
+
+
+I AM HERE product_reviews_write
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_reviews_write
+sidebox: 
+
+Explain 
+SELECT project_version_major, project_version_minor FROM zen_project_version WHERE project_version_key = 'Zen-Cart Database';
+
+
+
+I AM HERE product_reviews_write
+sidebox: 
+
+Explain 
+select startdate, counter, session_counter from zen_counter_history where startdate='20120116';
+
+
+
+I AM HERE product_reviews_write
+sidebox: 
+
+Explain 
+SELECT * FROM zen_counter_history WHERE startdate = '20120116' AND counter = 1 AND session_counter = 1 LIMIT 1;
+
+
+
+I AM HERE product_reviews_write
+sidebox: 
+
+Explain 
+select startdate, counter from zen_counter;
+
+
+
+I AM HERE product_reviews_write
+sidebox: 
+
+Explain 
+select count(*) as total
+              from zen_sessions
+              where sesskey = 'eh5il6etjllhcig47jhd7cuor7';
+

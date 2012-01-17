@@ -1,0 +1,234 @@
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select * from zen_db_cache where cache_entry_name = 'zc_1bb761a3a593e628e1eddaeb1321bda4';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select * from zen_db_cache where cache_entry_name = 'zc_1bb761a3a593e628e1eddaeb1321bda4';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select c.categories_id, cd.categories_name, c.parent_id, c.categories_image
+                               from zen_categories c, zen_categories_description cd
+                               where c.parent_id = 2
+                               and c.categories_id = cd.categories_id
+                               and cd.language_id=1
+                               and c.categories_status= 1
+                               order by sort_order, cd.categories_name;
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select count(*) as count
+                             from zen_categories
+                             where parent_id = '2';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select count(*) as total
+                         from zen_products p, zen_products_to_categories p2c
+                         where p.products_id = p2c.products_id
+                         and p.products_status = '1'
+                         and p2c.categories_id = '2';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '2';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select count(*) as count
+                             from zen_categories
+                             where parent_id = '3';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select count(*) as total
+                         from zen_products p, zen_products_to_categories p2c
+                         where p.products_id = p2c.products_id
+                         and p.products_status = '1'
+                         and p2c.categories_id = '3';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '3';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select count(*) as count
+                             from zen_categories
+                             where parent_id = '4';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select count(*) as total
+                         from zen_products p, zen_products_to_categories p2c
+                         where p.products_id = p2c.products_id
+                         and p.products_status = '1'
+                         and p2c.categories_id = '4';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '4';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select count(*) as count
+                             from zen_categories
+                             where parent_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select count(*) as total
+                         from zen_products p, zen_products_to_categories p2c
+                         where p.products_id = p2c.products_id
+                         and p.products_status = '1'
+                         and p2c.categories_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select product_type_id from zen_product_types_to_category where category_id='2';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select product_type_id from zen_product_types_to_category where category_id='3';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select product_type_id from zen_product_types_to_category where category_id='4';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select product_type_id from zen_product_types_to_category where category_id='1';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select s.products_id from zen_specials s where s.status= 1 limit 1;
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select p.products_id
+                                 from zen_products p
+                                 where p.products_status = 1  limit 1;
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select products_id from zen_featured where status= 1 limit 1;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select * from zen_ezpages where status_footer = 1 and footer_sort_order > 0 order by footer_sort_order, pages_title;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select count(*) as total
+              from zen_sessions
+              where sesskey = 'eh5il6etjllhcig47jhd7cuor7';
+

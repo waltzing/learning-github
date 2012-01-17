@@ -1,0 +1,175 @@
+16/01/2012 17:08:42 [0.349s] /zen/adminnzee/configuration.php?gID=10&cID=241
+16/01/2012 17:08:55 [0.242s] /zen/adminnzee/configuration.php?gID=10&cID=244&action=edit
+16/01/2012 17:09:06 [0.292s] /zen/adminnzee/configuration.php?gID=10&cID=244&action=save
+16/01/2012 17:09:06 [0.623s] /zen/adminnzee/configuration.php?gID=10&cID=244
+16/01/2012 17:09:07 [0.216s] /zen/adminnzee/configuration.php?gID=10&cID=245&action=edit
+16/01/2012 17:09:19 [0.638s] /zen/adminnzee/configuration.php?gID=10&cID=245&action=save
+16/01/2012 17:09:20 [0.637s] /zen/adminnzee/configuration.php?gID=10&cID=245
+16/01/2012 17:09:35 - /zen/ (0.403s)
+16/01/2012 17:09:46 - /zen/ (0.350s)
+16/01/2012 17:09:50 - /zen/index.php?main_page=login (0.379s)
+16/01/2012 17:09:52 - /zen/index.php?main_page=shopping_cart (0.358s)
+16/01/2012 17:09:57 - /zen/index.php?main_page=login (0.188s)
+16/01/2012 17:10:00 - /zen/index.php?main_page=shopping_cart (0.218s)
+16/01/2012 17:10:08 - /zen/index.php?main_page=products_all (1.041s)
+16/01/2012 17:10:41 [0.344s] /zen/adminnzee/configuration.php?gID=13
+16/01/2012 17:11:02 [0.679s] /zen/adminnzee/configuration.php?gID=14
+16/01/2012 17:11:10 [0.400s] /zen/adminnzee/configuration.php?gID=15
+16/01/2012 17:11:27 [0.282s] /zen/adminnzee/configuration.php?gID=15&cID=304&action=edit
+16/01/2012 17:11:34 [0.272s] /zen/adminnzee/configuration.php?gID=15&cID=304&action=save
+16/01/2012 17:11:34 [0.181s] /zen/adminnzee/configuration.php?gID=15&cID=304
+16/01/2012 17:11:38 [0.468s] /zen/adminnzee/configuration.php?gID=15&cID=303&action=edit
+16/01/2012 17:11:43 [0.255s] /zen/adminnzee/configuration.php?gID=15&cID=303&action=save
+16/01/2012 17:11:43 [0.172s] /zen/adminnzee/configuration.php?gID=15&cID=303
+16/01/2012 17:11:45 [0.207s] /zen/adminnzee/configuration.php?gID=15&cID=305&action=edit
+16/01/2012 17:11:48 [0.415s] /zen/adminnzee/configuration.php?gID=15&cID=306&action=edit
+16/01/2012 17:12:01 [0.352s] /zen/adminnzee/configuration.php?gID=15&cID=307&action=edit
+16/01/2012 17:12:22 [0.746s] /zen/adminnzee/configuration.php?gID=18
+16/01/2012 17:13:23 [0.112s] /zen/adminnzee/configuration.php?gID=19
+16/01/2012 17:13:28 [0.136s] /zen/adminnzee/configuration.php?gID=19&cID=392&action=edit
+16/01/2012 17:14:11 [0.138s] /zen/adminnzee/configuration.php?gID=19&cID=417&action=edit
+16/01/2012 17:14:52 [0.121s] /zen/adminnzee/configuration.php?gID=19&cID=438&action=edit
+16/01/2012 17:15:13 [0.181s] /zen/adminnzee/configuration.php?gID=19&cID=438&action=save
+16/01/2012 17:15:14 [0.301s] /zen/adminnzee/configuration.php?gID=19&cID=438
+16/01/2012 17:15:27 [0.145s] /zen/adminnzee/configuration.php?gID=20
+16/01/2012 17:15:39 [0.559s] /zen/adminnzee/configuration.php?gID=21
+16/01/2012 17:15:45 [0.351s] /zen/adminnzee/configuration.php?gID=21&cID=455&action=edit
+16/01/2012 17:16:09 [0.182s] /zen/adminnzee/configuration.php?gID=24
+16/01/2012 17:16:15 - /zen/ (0.514s)
+16/01/2012 17:16:38 - /zen/ (0.481s)
+16/01/2012 17:16:56 [0.891s] /zen/adminnzee/reviews.php
+16/01/2012 17:17:15 [0.369s] /zen/adminnzee/product_types.php
+16/01/2012 17:17:20 [0.402s] /zen/adminnzee/product_types.php?page=1&ptID=1&action=layout
+16/01/2012 17:17:39 [0.118s] /zen/adminnzee/product_types.php?ptID=1&cID=8&action=layout_edit
+16/01/2012 17:17:43 [0.077s] /zen/adminnzee/product_types.php?ptID=1&cID=8&action=layout_save
+16/01/2012 17:17:44 [0.212s] /zen/adminnzee/product_types.php?gID=&cID=8&ptID=1&action=layout
+16/01/2012 17:18:13 [0.489s] /zen/adminnzee/options_name_manager.php
+16/01/2012 17:18:26 [0.464s] /zen/adminnzee/attributes_controller.php
+16/01/2012 17:18:43 - /zen/ (0.406s)
+16/01/2012 17:18:52 [0.562s] /zen/adminnzee/options_values_manager.php
+16/01/2012 17:19:10 [0.305s] /zen/adminnzee/options_values_manager.php?action=add_product_option_values&value_page=1
+16/01/2012 17:19:11 [0.729s] /zen/adminnzee/options_values_manager.php?value_page=1
+16/01/2012 17:19:29 - /zen/ (1.289s)
+16/01/2012 17:19:37 - /zen/index.php?main_page=product_info&cPath=2&products_id=1 (0.390s)
+16/01/2012 17:19:40 [0.097s] /zen/adminnzee/developers_tool_kit.php
+16/01/2012 17:19:40 - /zen/index.php?main_page=product_info&cPath=1&products_id=6 (0.341s)
+16/01/2012 17:20:03 - /zen/index.php?main_page=products_new (2.433s)
+16/01/2012 17:20:18 - /zen/index.php?main_page=products_all (3.896s)
+16/01/2012 17:20:37 [0.103s] /zen/adminnzee/developers_tool_kit.php?action=locate_configuration
+16/01/2012 17:20:53 [0.522s] /zen/adminnzee/developers_tool_kit.php?action=locate_configuration
+16/01/2012 17:21:05 [0.185s] /zen/adminnzee/developers_tool_kit.php?action=locate_function
+16/01/2012 17:21:13 [0.373s] /zen/adminnzee/developers_tool_kit.php?action=locate_class
+16/01/2012 17:21:23 [2.658s] /zen/adminnzee/developers_tool_kit.php?action=locate_template
+16/01/2012 17:21:39 [3.623s] /zen/adminnzee/developers_tool_kit.php?action=locate_all_files
+16/01/2012 17:22:20 [0.570s] /zen/adminnzee/featured.php
+16/01/2012 17:22:24 [0.441s] /zen/adminnzee/featured.php?page=0&action=new
+16/01/2012 17:22:41 [0.141s] /zen/adminnzee/featured.php?page=0&action=insert&go_back=
+16/01/2012 17:22:41 [0.224s] /zen/adminnzee/featured.php?fID=1
+16/01/2012 17:22:47 - /zen/ (0.391s)
+16/01/2012 17:42:17 - /zen/index.php?main_page=products_all (5.298s)
+16/01/2012 17:42:26 - /zen/index.php?main_page=featured_products (0.359s)
+16/01/2012 17:42:46 [0.460s] /zen/adminnzee/categories.php
+16/01/2012 17:43:03 [0.277s] /zen/adminnzee/layout_controller.php
+16/01/2012 17:43:29 [0.946s] /zen/adminnzee/layout_controller.php?page=&cID=91
+16/01/2012 17:43:46 [0.440s] /zen/adminnzee/layout_controller.php?page=&cID=91&action=edit
+16/01/2012 17:47:14 - /zen/index.php?main_page=product_info&cPath=2&products_id=2 (0.407s)
+16/01/2012 18:22:04 - /zen/index.php?main_page=product_info&cPath=2&products_id=2 (1.612s)
+16/01/2012 18:22:21 - /zen/index.php?main_page=login (0.672s)
+16/01/2012 18:22:36 - /zen/ (0.388s)
+16/01/2012 19:07:15 - /zen/ (0.644s)
+16/01/2012 20:06:35 [0.633s] /zen/adminnzee/template_select.php
+16/01/2012 20:06:35 [0.160s] /zen/adminnzee/login.php
+16/01/2012 20:06:42 [0.483s] /zen/adminnzee/login.php
+16/01/2012 20:06:44 [1.006s] /zen/adminnzee/index.php
+16/01/2012 20:06:57 [0.975s] /zen/adminnzee/template_select.php
+16/01/2012 20:07:06 [0.936s] /zen/adminnzee/template_select.php?page=1&tID=1&action=edit
+16/01/2012 20:07:25 [0.634s] /zen/adminnzee/layout_controller.php
+16/01/2012 20:08:05 [0.399s] /zen/adminnzee/configuration.php?gID=4
+17/01/2012 06:54:26 - /zen/ (3.511s)
+17/01/2012 06:55:06 [7.499s] /zen/adminnzee/product_types.php
+17/01/2012 06:55:07 [0.232s] /zen/adminnzee/login.php
+17/01/2012 06:55:13 [0.090s] /zen/adminnzee/login.php
+17/01/2012 06:55:13 [0.544s] /zen/adminnzee/index.php
+17/01/2012 06:55:50 [0.441s] /zen/adminnzee/product_types.php
+17/01/2012 06:55:57 [0.400s] /zen/adminnzee/categories.php
+17/01/2012 06:56:09 [0.654s] /zen/adminnzee/attributes_controller.php
+17/01/2012 06:56:21 [0.176s] /zen/adminnzee/categories.php?action=new_product&cPath=2&pID=2&product_type=1
+17/01/2012 06:56:21 [0.288s] /zen/adminnzee/product.php?action=new_product&cPath=2&pID=2&product_type=1
+17/01/2012 06:57:29 [0.192s] /zen/adminnzee/product.php?cPath=2&product_type=1&pID=2&action=new_product_preview
+17/01/2012 06:57:36 [0.175s] /zen/adminnzee/product.php?cPath=2&product_type=1&pID=2&action=update_product
+17/01/2012 06:57:36 [0.246s] /zen/adminnzee/categories.php?cPath=2&pID=2
+17/01/2012 07:08:16 [0.277s] /zen/adminnzee/salemaker.php
+17/01/2012 07:08:24 [0.118s] /zen/adminnzee/salemaker.php?page=0&action=new
+17/01/2012 07:10:19 [0.325s] /zen/adminnzee/salemaker.php?page=0&action=insert
+17/01/2012 07:10:19 [0.170s] /zen/adminnzee/salemaker.php?page=0&sID=1
+17/01/2012 07:10:31 - /zen/ (0.894s)
+17/01/2012 07:10:57 [0.110s] /zen/adminnzee/salemaker.php?page=1&sID=1&action=edit
+17/01/2012 07:11:09 [0.211s] /zen/adminnzee/salemaker.php?page=1&action=update
+17/01/2012 07:11:10 [0.145s] /zen/adminnzee/salemaker.php?page=1&sID=1
+17/01/2012 07:11:22 [0.518s] /zen/adminnzee/salemaker.php?page=1&sID=1&action=edit
+17/01/2012 07:11:30 [0.280s] /zen/adminnzee/salemaker.php?page=1&action=update
+17/01/2012 07:11:30 [0.224s] /zen/adminnzee/salemaker.php?page=1&sID=1
+17/01/2012 07:11:38 - /zen/ (0.843s)
+17/01/2012 07:11:58 [0.182s] /zen/adminnzee/salemaker.php?page=1&sID=1&action=edit
+17/01/2012 07:14:32 [0.184s] /zen/adminnzee/salemaker_info.php
+17/01/2012 07:29:50 [0.710s] /zen/adminnzee/salemaker_popup.php?cid=2
+17/01/2012 07:30:23 [0.536s] /zen/adminnzee/salemaker.php?page=1&sID=1
+17/01/2012 07:30:47 [0.213s] /zen/adminnzee/featured.php
+17/01/2012 07:31:14 [2.143s] /zen/adminnzee/products_expected.php
+17/01/2012 07:31:44 [0.893s] /zen/adminnzee/reviews.php
+17/01/2012 07:31:54 [0.190s] /zen/adminnzee/manufacturers.php
+17/01/2012 07:32:07 [0.176s] /zen/adminnzee/manufacturers.php?page=0&mID=&action=new
+17/01/2012 07:32:57 [0.334s] /zen/adminnzee/manufacturers.php?action=insert
+17/01/2012 07:32:58 [0.406s] /zen/adminnzee/manufacturers.php?mID=1
+17/01/2012 07:33:06 [0.254s] /zen/adminnzee/manufacturers.php?page=1&mID=1&action=new
+17/01/2012 07:33:23 [0.247s] /zen/adminnzee/categories.php
+17/01/2012 07:33:29 [0.192s] /zen/adminnzee/categories.php?cPath=2
+17/01/2012 07:33:45 [0.596s] /zen/adminnzee/attributes_controller.php?products_filter=2&current_category_id=2
+17/01/2012 07:34:11 [0.234s] /zen/adminnzee/categories.php?action=new_product&cPath=2&pID=2&product_type=1
+17/01/2012 07:34:11 [0.207s] /zen/adminnzee/product.php?action=new_product&cPath=2&pID=2&product_type=1
+17/01/2012 07:34:34 [0.168s] /zen/adminnzee/categories.php?cPath=2&pID=2
+17/01/2012 07:34:40 [0.303s] /zen/adminnzee/configuration.php?gID=1
+17/01/2012 07:35:15 [0.499s] /zen/adminnzee/configuration.php?gID=8
+17/01/2012 07:35:21 [0.235s] /zen/adminnzee/configuration.php?gID=8&cID=207&action=edit
+17/01/2012 07:35:25 [0.306s] /zen/adminnzee/configuration.php?gID=8&cID=207&action=save
+17/01/2012 07:35:25 [0.136s] /zen/adminnzee/configuration.php?gID=8&cID=207
+17/01/2012 07:35:29 [0.086s] /zen/adminnzee/configuration.php?gID=8&cID=207&action=edit
+17/01/2012 07:35:40 [0.183s] /zen/adminnzee/configuration.php?gID=8&cID=207&action=save
+17/01/2012 07:35:40 [0.206s] /zen/adminnzee/configuration.php?gID=8&cID=207
+17/01/2012 07:35:51 [0.172s] /zen/adminnzee/categories.php
+17/01/2012 07:35:55 [0.359s] /zen/adminnzee/categories.php?cPath=2
+17/01/2012 07:36:00 [0.176s] /zen/adminnzee/product.php?page=1&product_type=1&cPath=2&pID=2&action=new_product
+17/01/2012 07:36:36 [0.325s] /zen/adminnzee/product.php?cPath=2&product_type=1&pID=2&action=new_product_preview&page=1
+17/01/2012 07:36:45 [0.334s] /zen/adminnzee/product.php?cPath=2&product_type=1&pID=2&action=update_product&page=1
+17/01/2012 07:36:46 [0.810s] /zen/adminnzee/categories.php?cPath=2&pID=2&page=1
+17/01/2012 07:36:53 - /zen/ (1.039s)
+17/01/2012 07:37:06 - /zen/index.php?main_page=product_info&cPath=2&products_id=2 (2.199s)
+17/01/2012 07:39:25 - /zen/ (0.582s)
+17/01/2012 07:39:49 - /zen/index.php?main_page=product_info&cPath=2&products_id=2 (0.458s)
+17/01/2012 07:40:19 [0.701s] /zen/adminnzee/product.php?page=1&product_type=1&cPath=2&pID=2&action=new_product
+17/01/2012 07:40:41 [0.491s] /zen/adminnzee/options_name_manager.php
+17/01/2012 07:40:51 [0.212s] /zen/adminnzee/options_name_manager.php?action=update_option&option_id=1&option_order_by=products_options_id&option_page=1
+17/01/2012 07:44:38 [1.959s] /zen/adminnzee/options_values_manager.php
+17/01/2012 07:49:36 - /zen/ (4.322s)
+17/01/2012 07:50:29 [2.404s] /zen/adminnzee/attributes_controller.php
+17/01/2012 09:01:11 [0.346s] /zen/adminnzee/
+17/01/2012 09:01:11 [0.224s] /zen/adminnzee/login.php?zenAdminID=sjpnkna68m0abarrvae3jti620
+17/01/2012 09:01:56 [0.857s] /zen/adminnzee/login.php
+17/01/2012 09:01:58 [1.762s] /zen/adminnzee/index.php
+17/01/2012 09:02:09 [0.678s] /zen/adminnzee/option_name.php
+17/01/2012 09:02:28 [0.385s] /zen/adminnzee/option_values.php
+17/01/2012 09:02:57 [2.585s] /zen/adminnzee/attributes_controller.php
+17/01/2012 09:03:12 [0.337s] /zen/adminnzee/attributes_controller.php?securityToken=db12a0b0fc261b2b6e7b420d4c92e533&current_category_id=3&products_filter=2&action=new_cat
+17/01/2012 09:03:13 [0.720s] /zen/adminnzee/attributes_controller.php?products_filter=4&current_category_id=3
+17/01/2012 09:03:53 [0.322s] /zen/adminnzee/attributes_controller.php?action=add_product_attributes&attribute_page=1&products_filter=4
+17/01/2012 09:03:56 [2.510s] /zen/adminnzee/attributes_controller.php?attribute_page=1&products_filter=4&current_category_id=3&products_filter=4&current_category_id=3
+17/01/2012 09:04:32 [0.337s] /zen/adminnzee/options_values_manager.php
+17/01/2012 09:05:07 [0.517s] /zen/adminnzee/options_values_manager.php?action=add_product_option_values&value_page=1
+17/01/2012 09:05:07 [0.227s] /zen/adminnzee/options_values_manager.php?value_page=1
+17/01/2012 09:05:21 [0.701s] /zen/adminnzee/options_values_manager.php?action=add_product_option_values&value_page=1
+17/01/2012 09:05:22 [1.044s] /zen/adminnzee/options_values_manager.php?value_page=1
+17/01/2012 09:06:13 [1.153s] /zen/adminnzee/options_values_manager.php?action=copy_options_values_one_to_another
+17/01/2012 09:06:25 [1.012s] /zen/adminnzee/categories.php
+17/01/2012 09:06:32 [0.635s] /zen/adminnzee/categories.php?cPath=3
+17/01/2012 09:06:33 [0.315s] /zen/adminnzee/categories.php?cPath=3
+17/01/2012 09:06:43 [0.152s] /zen/adminnzee/product.php?page=1&product_type=1&cPath=3&pID=3&action=new_product

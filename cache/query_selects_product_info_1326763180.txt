@@ -1,0 +1,1524 @@
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select template_dir
+            from zen_template_select
+            where template_language = 0;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select template_dir
+            from zen_template_select
+            where template_language = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select code
+                      from zen_currencies
+                      where code = 'USD' LIMIT 1;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select count(*) as count
+                              from zen_whos_online
+                              where session_id = 'eh5il6etjllhcig47jhd7cuor7' and ip_address='74.190.141.129';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select banners_id, date_scheduled
+                      from zen_banners
+                      where date_scheduled != 'NULL';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select b.banners_id, b.expires_date, b.expires_impressions,
+                             sum(bh.banners_shown) as banners_shown
+                      from zen_banners b, zen_banners_history bh
+                      where b.status = 1
+                      and b.banners_id = bh.banners_id
+                      group by b.banners_id, b.expires_date, b.expires_impressions;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select categories_name
+                           from zen_categories_description
+                           where categories_id = '1'
+                           and language_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select *
+        from zen_get_terms_to_filter;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_name
+                   from zen_products_description
+                   where products_id = '6'
+             and language_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+SELECT project_version_major, project_version_minor FROM zen_project_version WHERE project_version_key = 'Zen-Cart Database';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select startdate, counter, session_counter from zen_counter_history where startdate='20120116';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+SELECT * FROM zen_counter_history WHERE startdate = '20120116' AND counter = 1 AND session_counter = 1 LIMIT 1;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select startdate, counter from zen_counter;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select count(*) as total
+          from zen_products p, zen_products_description pd
+          where    p.products_status = '1'
+          and      p.products_id = '6'
+          and      pd.products_id = p.products_id
+          and      pd.language_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select cd.categories_name from zen_categories c, zen_categories_description cd where c.parent_id = 0 and c.categories_id = cd.categories_id and cd.language_id='1' and c.categories_status=1;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select pd.products_name, p.products_model, p.products_price_sorter, p.products_tax_class_id,
+                                      p.metatags_title_status, p.metatags_products_name_status, p.metatags_model_status,
+                                      p.products_id, p.metatags_price_status, p.metatags_title_tagline_status,
+                                      pd.products_description, p.product_is_free, p.product_is_call,
+                                      mtpd.metatags_title, mtpd.metatags_keywords, mtpd.metatags_description
+                              from (zen_products p, zen_products_description pd) left join zen_meta_tags_products_description mtpd on mtpd.products_id = p.products_id and mtpd.language_id = '1'
+                              where p.products_id = '6'
+                              and p.products_id = pd.products_id
+                              and pd.language_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_tax_class_id, products_price, products_priced_by_attribute, product_is_free, product_is_call from zen_products where products_id = '6' limit 1;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select options_id, price_prefix, options_values_price, attributes_display_only, attributes_price_base_included, round(concat(price_prefix, options_values_price), 5) as value from zen_products_attributes where products_id = '6' and attributes_display_only != '1' and attributes_price_base_included='1' order by options_id, value;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_model, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select options_id, price_prefix, options_values_price, attributes_display_only, attributes_price_base_included, round(concat(price_prefix, options_values_price), 5) as value from zen_products_attributes where products_id = '6' and attributes_display_only != '1' and attributes_price_base_included='1' order by options_id, value;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select specials_new_products_price from zen_specials where products_id = '6' and status='1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_model, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select options_id, price_prefix, options_values_price, attributes_display_only, attributes_price_base_included, round(concat(price_prefix, options_values_price), 5) as value from zen_products_attributes where products_id = '6' and attributes_display_only != '1' and attributes_price_base_included='1' order by options_id, value;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select specials_new_products_price from zen_specials where products_id = '6' and status='1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select master_categories_id from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select sale_specials_condition, sale_deduction_value, sale_deduction_type from zen_salemaker_sales where sale_categories_all like '%,1,%' and sale_status = '1' and (sale_date_start <= now() or sale_date_start = '0001-01-01') and (sale_date_end >= now() or sale_date_end = '0001-01-01') and (sale_pricerange_from <= '42.0000' or sale_pricerange_from = '0') and (sale_pricerange_to >= '42.0000' or sale_pricerange_to = '0');
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select sum(tax_rate) as tax_rate
+                  from (zen_tax_rates tr
+                  left join zen_zones_to_geo_zones za on (tr.tax_zone_id = za.geo_zone_id)
+                  left join zen_geo_zones tz on (tz.geo_zone_id = tr.tax_zone_id) )
+                  where (za.zone_country_id is null
+                  or za.zone_country_id = 0
+                  or za.zone_country_id = '223')
+                  and (za.zone_id is null
+                  or za.zone_id = 0
+                  or za.zone_id = '19')
+                  and tr.tax_class_id = '0'
+                  group by tr.tax_priority;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where (layout_box_status=1 or layout_box_status_single=1) and layout_template ='digitalshop' and layout_box_name='search_header.php';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select * from zen_ezpages where status_header = 1 and header_sort_order > 0 order by header_sort_order, pages_title;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_location = 0 and layout_box_status= '1' and layout_template ='digitalshop' order by layout_box_sort_order;
+
+
+
+I AM HERE product_info
+sidebox: musicgenres
+
+Explain 
+select music_genre_id, music_genre_name
+                          from zen_music_genre
+                          order by music_genre_name;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select count(*) as total
+          from zen_products p, zen_products_description pd
+          where    p.products_status = '1'
+          and      p.products_id = '6'
+          and      pd.products_id = p.products_id
+          and      pd.language_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select p.products_id, pd.products_name,
+                  pd.products_description, p.products_model,
+                  p.products_quantity, p.products_image,
+                  pd.products_url, p.products_price,
+                  p.products_tax_class_id, p.products_date_added,
+                  p.products_date_available, p.manufacturers_id, p.products_quantity,
+                  p.products_weight, p.products_priced_by_attribute, p.product_is_free,
+                  p.products_qty_box_status,
+                  p.products_quantity_order_max,
+                  p.products_discount_type, p.products_discount_type_from, p.products_sort_order, p.products_price_sorter
+           from   zen_products p, zen_products_description pd
+           where  p.products_status = '1'
+           and    p.products_id = '6'
+           and    pd.products_id = p.products_id
+           and    pd.language_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select sum(tax_rate) as tax_rate
+                  from (zen_tax_rates tr
+                  left join zen_zones_to_geo_zones za on (tr.tax_zone_id = za.geo_zone_id)
+                  left join zen_geo_zones tz on (tz.geo_zone_id = tr.tax_zone_id) )
+                  where (za.zone_country_id is null
+                  or za.zone_country_id = 0
+                  or za.zone_country_id = '223')
+                  and (za.zone_id is null
+                  or za.zone_id = 0
+                  or za.zone_id = '19')
+                  and tr.tax_class_id = '0'
+                  group by tr.tax_priority;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select m.manufacturers_name
+                      from zen_products p, zen_manufacturers m
+                      where p.products_id = '6'
+                      and p.manufacturers_id = m.manufacturers_id;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_model, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select options_id, price_prefix, options_values_price, attributes_display_only, attributes_price_base_included, round(concat(price_prefix, options_values_price), 5) as value from zen_products_attributes where products_id = '6' and attributes_display_only != '1' and attributes_price_base_included='1' order by options_id, value;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select specials_new_products_price from zen_specials where products_id = '6' and status='1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select master_categories_id from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select sale_specials_condition, sale_deduction_value, sale_deduction_type from zen_salemaker_sales where sale_categories_all like '%,1,%' and sale_status = '1' and (sale_date_start <= now() or sale_date_start = '0001-01-01') and (sale_date_end >= now() or sale_date_end = '0001-01-01') and (sale_pricerange_from <= '42.0000' or sale_pricerange_from = '0') and (sale_pricerange_to >= '42.0000' or sale_pricerange_to = '0');
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select count(*) as total
+          from zen_products_options popt, zen_products_attributes patrib
+          where    patrib.products_id='6'
+            and      patrib.options_id = popt.products_options_id
+            and      popt.language_id = '1' limit 1;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select count(*) as count from zen_reviews r, zen_reviews_description rd
+                       where r.products_id = '6'
+                       and r.reviews_id = rd.reviews_id
+                       and rd.languages_id = '1' and r.status = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select p.products_id, p.products_model, p.products_price_sorter, pd.products_name, p.products_sort_order
+          from   zen_products p, zen_products_description pd, zen_products_to_categories ptc
+          where  p.products_status = '1' and p.products_id = pd.products_id and pd.language_id= '1' and p.products_id = ptc.products_id and ptc.categories_id = '1' order by pd.products_name;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select categories_name
+            from   zen_categories_description
+            where  categories_id = 1 AND language_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select p.products_image from zen_products p  where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_name
+                      from zen_products_description
+                      where products_id = '6'
+                      and language_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select p.products_image from zen_products p  where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_name
+                      from zen_products_description
+                      where products_id = '6'
+                      and language_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select options_id, price_prefix, options_values_price, attributes_display_only, attributes_price_base_included, round(concat(price_prefix, options_values_price), 5) as value from zen_products_attributes where products_id = '6' and attributes_display_only != '1' and attributes_price_base_included='1' order by options_id, value;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select sum(tax_rate) as tax_rate
+                  from (zen_tax_rates tr
+                  left join zen_zones_to_geo_zones za on (tr.tax_zone_id = za.geo_zone_id)
+                  left join zen_geo_zones tz on (tz.geo_zone_id = tr.tax_zone_id) )
+                  where (za.zone_country_id is null
+                  or za.zone_country_id = 0
+                  or za.zone_country_id = '223')
+                  and (za.zone_id is null
+                  or za.zone_id = 0
+                  or za.zone_id = '19')
+                  and tr.tax_class_id = '0'
+                  group by tr.tax_priority;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='SHOW_PRODUCT_INFO_STARTING_AT';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='SHOW_PRODUCT_INFO_MODEL';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='SHOW_PRODUCT_INFO_WEIGHT';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='SHOW_PRODUCT_INFO_QUANTITY';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='SHOW_PRODUCT_INFO_MANUFACTURER';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='SHOW_PRODUCT_INFO_IN_CART_QTY';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='SHOW_PRODUCT_INFO_TELL_A_FRIEND';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='SHOW_PRODUCT_INFO_REVIEWS';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='SHOW_PRODUCT_INFO_REVIEWS_COUNT';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='SHOW_PRODUCT_INFO_DATE_AVAILABLE';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='SHOW_PRODUCT_INFO_DATE_ADDED';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='SHOW_PRODUCT_INFO_URL';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='SHOW_PRODUCT_INFO_ADDITIONAL_IMAGES';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select configuration_key, configuration_value from zen_product_type_layout where configuration_key='SHOW_PRODUCT_INFO_ALWAYS_FREE_SHIPPING_IMAGE_SWITCH';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_quantity_order_min from zen_products where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select * from zen_products_discount_quantity where products_id='6' and discount_qty !=0  order by discount_qty;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select options_id, price_prefix, options_values_price, attributes_display_only, attributes_price_base_included, round(concat(price_prefix, options_values_price), 5) as value from zen_products_attributes where products_id = '6' and attributes_display_only != '1' and attributes_price_base_included='1' order by options_id, value;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_model, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select options_id, price_prefix, options_values_price, attributes_display_only, attributes_price_base_included, round(concat(price_prefix, options_values_price), 5) as value from zen_products_attributes where products_id = '6' and attributes_display_only != '1' and attributes_price_base_included='1' order by options_id, value;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select specials_new_products_price from zen_specials where products_id = '6' and status='1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select options_id, price_prefix, options_values_price, attributes_display_only, attributes_price_base_included, round(concat(price_prefix, options_values_price), 5) as value from zen_products_attributes where products_id = '6' and attributes_display_only != '1' and attributes_price_base_included='1' order by options_id, value;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_model, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select options_id, price_prefix, options_values_price, attributes_display_only, attributes_price_base_included, round(concat(price_prefix, options_values_price), 5) as value from zen_products_attributes where products_id = '6' and attributes_display_only != '1' and attributes_price_base_included='1' order by options_id, value;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select specials_new_products_price from zen_specials where products_id = '6' and status='1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select type_handler from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select sum(options_values_price) as total
+                         from zen_products_attributes
+                         where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_tax_class_id, products_price, products_priced_by_attribute, product_is_free, product_is_call, products_type from zen_products where products_id = '6' limit 1;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select options_id, price_prefix, options_values_price, attributes_display_only, attributes_price_base_included, round(concat(price_prefix, options_values_price), 5) as value from zen_products_attributes where products_id = '6' and attributes_display_only != '1' and attributes_price_base_included='1' order by options_id, value;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_model, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select options_id, price_prefix, options_values_price, attributes_display_only, attributes_price_base_included, round(concat(price_prefix, options_values_price), 5) as value from zen_products_attributes where products_id = '6' and attributes_display_only != '1' and attributes_price_base_included='1' order by options_id, value;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select specials_new_products_price from zen_specials where products_id = '6' and status='1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_model, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_price, products_priced_by_attribute from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select options_id, price_prefix, options_values_price, attributes_display_only, attributes_price_base_included, round(concat(price_prefix, options_values_price), 5) as value from zen_products_attributes where products_id = '6' and attributes_display_only != '1' and attributes_price_base_included='1' order by options_id, value;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select specials_new_products_price from zen_specials where products_id = '6' and status='1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select master_categories_id from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select sale_specials_condition, sale_deduction_value, sale_deduction_type from zen_salemaker_sales where sale_categories_all like '%,1,%' and sale_status = '1' and (sale_date_start <= now() or sale_date_start = '0001-01-01') and (sale_date_end >= now() or sale_date_end = '0001-01-01') and (sale_pricerange_from <= '42.0000' or sale_pricerange_from = '0') and (sale_pricerange_to >= '42.0000' or sale_pricerange_to = '0');
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select sum(tax_rate) as tax_rate
+                  from (zen_tax_rates tr
+                  left join zen_zones_to_geo_zones za on (tr.tax_zone_id = za.geo_zone_id)
+                  left join zen_geo_zones tz on (tz.geo_zone_id = tr.tax_zone_id) )
+                  where (za.zone_country_id is null
+                  or za.zone_country_id = 0
+                  or za.zone_country_id = '223')
+                  and (za.zone_id is null
+                  or za.zone_id = 0
+                  or za.zone_id = '19')
+                  and tr.tax_class_id = '0'
+                  group by tr.tax_priority;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select p.product_is_always_free_shipping from zen_products p  where p.products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_id, products_quantity_order_min from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_id, products_quantity_order_units from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_id, products_quantity_mixed from zen_products where products_id='6' limit 1;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_id, products_quantity_order_min from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_id, products_quantity_order_units from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_id, products_quantity_order_max from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select product_is_call, products_quantity from zen_products where products_id = '6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select products_type from zen_products where products_id='6';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select allow_add_to_cart from zen_product_types where type_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select p.products_id, p.products_image
+                     from zen_orders_products opa, zen_orders_products opb, zen_orders o, zen_products p
+                     where opa.products_id = '6'
+                     and opa.orders_id = opb.orders_id
+                     and opb.products_id != '6'
+                     and opb.products_id = p.products_id
+                     and opb.orders_id = o.orders_id
+                     and p.products_status = 1
+                     group by p.products_id
+                     order by o.date_purchased desc
+                     limit 6;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_location=1 and layout_box_status=1 and layout_template ='digitalshop' order by layout_box_sort_order;
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select categories_id from zen_categories where categories_status=1 limit 1;
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select c.categories_id, cd.categories_name, c.parent_id, c.categories_image
+                             from zen_categories c, zen_categories_description cd
+                             where c.parent_id = 0
+                             and c.categories_id = cd.categories_id
+                             and cd.language_id='1'
+                             and c.categories_status= 1
+                             order by sort_order, cd.categories_name;
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select * from zen_db_cache where cache_entry_name = 'zc_1bb761a3a593e628e1eddaeb1321bda4';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select * from zen_db_cache where cache_entry_name = 'zc_1bb761a3a593e628e1eddaeb1321bda4';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select c.categories_id, cd.categories_name, c.parent_id, c.categories_image
+                               from zen_categories c, zen_categories_description cd
+                               where c.parent_id = 1
+                               and c.categories_id = cd.categories_id
+                               and cd.language_id=1
+                               and c.categories_status= 1
+                               order by sort_order, cd.categories_name;
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select count(*) as count
+                             from zen_categories
+                             where parent_id = '2';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select count(*) as total
+                         from zen_products p, zen_products_to_categories p2c
+                         where p.products_id = p2c.products_id
+                         and p.products_status = '1'
+                         and p2c.categories_id = '2';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '2';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select count(*) as count
+                             from zen_categories
+                             where parent_id = '3';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select count(*) as total
+                         from zen_products p, zen_products_to_categories p2c
+                         where p.products_id = p2c.products_id
+                         and p.products_status = '1'
+                         and p2c.categories_id = '3';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '3';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select count(*) as count
+                             from zen_categories
+                             where parent_id = '4';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select count(*) as total
+                         from zen_products p, zen_products_to_categories p2c
+                         where p.products_id = p2c.products_id
+                         and p.products_status = '1'
+                         and p2c.categories_id = '4';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '4';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select count(*) as count
+                             from zen_categories
+                             where parent_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select count(*) as total
+                         from zen_products p, zen_products_to_categories p2c
+                         where p.products_id = p2c.products_id
+                         and p.products_status = '1'
+                         and p2c.categories_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '1';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select product_type_id from zen_product_types_to_category where category_id='2';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select product_type_id from zen_product_types_to_category where category_id='3';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select product_type_id from zen_product_types_to_category where category_id='4';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select product_type_id from zen_product_types_to_category where category_id='1';
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select s.products_id from zen_specials s where s.status= 1 limit 1;
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select p.products_id
+                                 from zen_products p
+                                 where p.products_status = 1  limit 1;
+
+
+
+I AM HERE product_info
+sidebox: categories
+
+Explain 
+select products_id from zen_featured where status= 1 limit 1;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select * from zen_ezpages where status_footer = 1 and footer_sort_order > 0 order by footer_sort_order, pages_title;
+
+
+
+I AM HERE product_info
+sidebox: 
+
+Explain 
+select count(*) as total
+              from zen_sessions
+              where sesskey = 'eh5il6etjllhcig47jhd7cuor7';
+

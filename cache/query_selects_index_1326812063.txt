@@ -1,0 +1,30 @@
+
+
+I AM HERE index
+sidebox: 
+
+Explain 
+select languages_id, name, code, image, directory
+                          from zen_languages 
+                          order by sort_order;
+
+
+
+I AM HERE index
+sidebox: 
+
+Explain 
+select template_dir
+            from zen_template_select
+            where template_language = 0;
+
+
+
+I AM HERE index
+sidebox: 
+
+Explain 
+select template_dir
+            from zen_template_select
+            where template_language = '1';
+

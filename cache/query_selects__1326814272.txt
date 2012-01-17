@@ -1,0 +1,19 @@
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select value
+              from zen_sessions
+              where sesskey = 'uiuopa60oko0srhjb0iii4emt1'
+              and expiry > '1326814272';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select template_dir from zen_template_select where template_language in (1, 0) order by template_language DESC;
+

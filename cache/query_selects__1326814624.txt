@@ -1,0 +1,40 @@
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_key as cfgkey, configuration_value as cfgvalue
+                          from zen_product_type_layout;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select value
+              from zen_sessions
+              where sesskey = 'eh5il6etjllhcig47jhd7cuor7'
+              and expiry > '1326814624';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select code, title, symbol_left, symbol_right, decimal_point,
+                                  thousands_point, decimal_places, value
+                          from zen_currencies;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select p.products_id
+                                 from zen_products p
+                                 where products_id='2' limit 1;
+

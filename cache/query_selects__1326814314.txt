@@ -1,0 +1,102 @@
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_value from zen_configuration where configuration_key='ADMIN_DEMO';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_admin where admin_name='demo' or admin_name='Admin';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select languages_id, name, code, image, directory
+                               from zen_languages order by sort_order;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+SELECT project_version_major, project_version_minor FROM zen_project_version WHERE project_version_key = 'Zen-Cart Database';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_value from zen_configuration where configuration_key='MODULE_PAYMENT_INSTALLED';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_value from zen_configuration where configuration_key='MODULE_SHIPPING_INSTALLED';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_coupon_gv_queue where release_flag='N';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_group_id as cgID, 
+                                                       configuration_group_title as cgTitle 
+                                                from zen_configuration_group 
+                                                where visible = '1' order by sort_order;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total  from zen_manufacturers;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select manufacturers_id, manufacturers_name, manufacturers_image, date_added, last_modified from zen_manufacturers order by manufacturers_name limit 0, 20;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+SELECT * from zen_project_version WHERE project_version_key = 'Zen-Cart Database' ORDER BY project_version_date_applied DESC LIMIT 1;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+              from zen_sessions
+              where sesskey = 'uiuopa60oko0srhjb0iii4emt1';
+

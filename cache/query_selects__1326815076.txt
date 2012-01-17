@@ -1,0 +1,28 @@
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_key as cfgKey, configuration_value as cfgValue
+                          from zen_product_type_layout;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select value
+              from zen_sessions
+              where sesskey = 'uiuopa60oko0srhjb0iii4emt1'
+              and expiry > '1326815076';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select template_dir from zen_template_select where template_language in (1, 0) order by template_language DESC;
+

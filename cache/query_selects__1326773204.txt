@@ -1,0 +1,42 @@
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as count from zen_orders where orders_status = '4';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select c.customers_id as customers_id, c.customers_firstname as customers_firstname, c.customers_lastname as customers_lastname, a.customers_info_date_account_created as customers_info_date_account_created, a.customers_info_id from zen_customers c left join zen_customers_info a on c.customers_id = a.customers_info_id order by a.customers_info_date_account_created DESC limit 5;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select startdate, counter, session_counter from zen_counter_history order by startdate DESC limit 10;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select o.orders_id as orders_id, o.customers_name as customers_name, o.customers_id, o.date_purchased as date_purchased, o.currency, o.currency_value, ot.class, ot.text as order_total from zen_orders o left join zen_orders_total ot on (o.orders_id = ot.orders_id and class = 'ot_total') order by orders_id DESC limit 5;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+              from zen_sessions
+              where sesskey = 'uiuopa60oko0srhjb0iii4emt1';
+

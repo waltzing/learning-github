@@ -1,0 +1,246 @@
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select banners_id, date_scheduled
+                      from zen_banners
+                      where date_scheduled != 'NULL';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select b.banners_id, b.expires_date, b.expires_impressions,
+                             sum(bh.banners_shown) as banners_shown
+                      from zen_banners b, zen_banners_history bh
+                      where b.status = 1
+                      and b.banners_id = bh.banners_id
+                      group by b.banners_id, b.expires_date, b.expires_impressions;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select specials_id, products_id
+                       from zen_specials
+                       where status = '0'
+                       and (((specials_date_available <= 20120116 and specials_date_available != '0001-01-01') and (expires_date > 20120116))
+                       or ((specials_date_available <= 20120116 and specials_date_available != '0001-01-01') and (expires_date = '0001-01-01'))
+                       or (specials_date_available = '0001-01-01' and expires_date > 20120116))
+                       ;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select specials_id, products_id
+                       from zen_specials
+                       where status = '1'
+                       and (20120116 < specials_date_available and specials_date_available != '0001-01-01')
+                       ;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select specials_id, products_id
+                       from zen_specials
+                       where status = '1'
+                       and ((20120116 >= expires_date and expires_date != '0001-01-01')
+                       or (20120116 < specials_date_available and specials_date_available != '0001-01-01'));
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select featured_id
+                       from zen_featured
+                       where status = '0'
+                       and (((featured_date_available <= 20120116 and featured_date_available != '0001-01-01') and (expires_date > 20120116))
+                       or ((featured_date_available <= 20120116 and featured_date_available != '0001-01-01') and (expires_date = '0001-01-01'))
+                       or (featured_date_available = '0001-01-01' and expires_date > 20120116))
+                       ;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select featured_id
+                       from zen_featured
+                       where status = '1'
+                       and (20120116 < featured_date_available and featured_date_available != '0001-01-01')
+                       ;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select featured_id
+                       from zen_featured
+                       where status = '1'
+                       and ((20120116 >= expires_date and expires_date != '0001-01-01')
+                       or (20120116 < featured_date_available and featured_date_available != '0001-01-01'));
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select sale_id
+                       from zen_salemaker_sales
+                       where sale_status = '0'
+                       and (((sale_date_start <= 20120116 and sale_date_start != '0001-01-01') and (sale_date_end > 20120116))
+                       or ((sale_date_start <= 20120116 and sale_date_start != '0001-01-01') and (sale_date_end = '0001-01-01'))
+                       or (sale_date_start = '0001-01-01' and sale_date_end > 20120116))
+                       ;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select sale_id
+                       from zen_salemaker_sales
+                       where sale_status = '1'
+                       and (20120116 < sale_date_start and sale_date_start != '0001-01-01')
+                       ;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select sale_id
+                       from zen_salemaker_sales
+                       where sale_status = '1'
+                       and ((20120116 >= sale_date_end and sale_date_end != '0001-01-01')
+                       or (20120116 < sale_date_start and sale_date_start != '0001-01-01'));
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_value from zen_configuration where configuration_key='ADMIN_DEMO';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_admin where admin_name='demo' or admin_name='Admin';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_group_title
+                             from zen_configuration_group
+                             where configuration_group_id = '15';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+SELECT project_version_major, project_version_minor FROM zen_project_version WHERE project_version_key = 'Zen-Cart Database';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_value from zen_configuration where configuration_key='MODULE_PAYMENT_INSTALLED';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_value from zen_configuration where configuration_key='MODULE_SHIPPING_INSTALLED';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_coupon_gv_queue where release_flag='N';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_group_id as cgID, 
+                                                       configuration_group_title as cgTitle 
+                                                from zen_configuration_group 
+                                                where visible = '1' order by sort_order;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_id, configuration_title, configuration_value, configuration_key,
+                                        use_function from zen_configuration
+                                        where configuration_group_id = '15'
+                                        order by sort_order;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_key, configuration_description, date_added,
+                                        last_modified, use_function, set_function
+                                 from zen_configuration
+                                 where configuration_id = '306';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+SELECT * from zen_project_version WHERE project_version_key = 'Zen-Cart Database' ORDER BY project_version_date_applied DESC LIMIT 1;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+              from zen_sessions
+              where sesskey = '0jtgq428krmo12fso5jkvg8032';
+

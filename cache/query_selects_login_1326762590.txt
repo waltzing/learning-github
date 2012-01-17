@@ -1,0 +1,522 @@
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select template_dir
+            from zen_template_select
+            where template_language = 0;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select template_dir
+            from zen_template_select
+            where template_language = '1';
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select code
+                      from zen_currencies
+                      where code = 'USD' LIMIT 1;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select count(*) as count
+                              from zen_whos_online
+                              where session_id = 'e4tq2ot1hp4crur7n4c9qndnp6' and ip_address='64.53.47.160';
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select banners_id, date_scheduled
+                      from zen_banners
+                      where date_scheduled != 'NULL';
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select b.banners_id, b.expires_date, b.expires_impressions,
+                             sum(bh.banners_shown) as banners_shown
+                      from zen_banners b, zen_banners_history bh
+                      where b.status = 1
+                      and b.banners_id = bh.banners_id
+                      group by b.banners_id, b.expires_date, b.expires_impressions;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select *
+        from zen_get_terms_to_filter;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+SELECT project_version_major, project_version_minor FROM zen_project_version WHERE project_version_key = 'Zen-Cart Database';
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select startdate, counter, session_counter from zen_counter_history where startdate='20120116';
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+SELECT * FROM zen_counter_history WHERE startdate = '20120116' AND counter = 1 AND session_counter = 1 LIMIT 1;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select startdate, counter from zen_counter;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select cd.categories_name from zen_categories c, zen_categories_description cd where c.parent_id = 0 and c.categories_id = cd.categories_id and cd.language_id='1' and c.categories_status=1;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select distinct zone_country_id
+                               from zen_zones
+                               order by zone_country_id;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select zone_name, zone_id
+                              from zen_zones
+                              where zone_country_id = '13'
+                              order by zone_name;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select zone_name, zone_id
+                              from zen_zones
+                              where zone_country_id = '14'
+                              order by zone_name;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select zone_name, zone_id
+                              from zen_zones
+                              where zone_country_id = '38'
+                              order by zone_name;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select zone_name, zone_id
+                              from zen_zones
+                              where zone_country_id = '81'
+                              order by zone_name;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select zone_name, zone_id
+                              from zen_zones
+                              where zone_country_id = '163'
+                              order by zone_name;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select zone_name, zone_id
+                              from zen_zones
+                              where zone_country_id = '195'
+                              order by zone_name;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select zone_name, zone_id
+                              from zen_zones
+                              where zone_country_id = '204'
+                              order by zone_name;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select zone_name, zone_id
+                              from zen_zones
+                              where zone_country_id = '223'
+                              order by zone_name;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where (layout_box_status=1 or layout_box_status_single=1) and layout_template ='digitalshop' and layout_box_name='search_header.php';
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select * from zen_ezpages where status_header = 1 and header_sort_order > 0 order by header_sort_order, pages_title;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_location = 0 and layout_box_status= '1' and layout_template ='digitalshop' order by layout_box_sort_order;
+
+
+
+I AM HERE login
+sidebox: musicgenres
+
+Explain 
+select music_genre_id, music_genre_name
+                          from zen_music_genre
+                          order by music_genre_name;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select countries_id, countries_name
+                    from zen_countries
+                    order by countries_name;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select countries_name
+                      from zen_countries
+                      where countries_id = '223';
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select layout_box_name from zen_layout_boxes where layout_box_location=1 and layout_box_status=1 and layout_template ='digitalshop' order by layout_box_sort_order;
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select categories_id from zen_categories where categories_status=1 limit 1;
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select c.categories_id, cd.categories_name, c.parent_id, c.categories_image
+                             from zen_categories c, zen_categories_description cd
+                             where c.parent_id = 0
+                             and c.categories_id = cd.categories_id
+                             and cd.language_id='1'
+                             and c.categories_status= 1
+                             order by sort_order, cd.categories_name;
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select * from zen_db_cache where cache_entry_name = 'zc_1bb761a3a593e628e1eddaeb1321bda4';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select * from zen_db_cache where cache_entry_name = 'zc_1bb761a3a593e628e1eddaeb1321bda4';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select * from zen_db_cache where cache_entry_name = 'zc_1bb761a3a593e628e1eddaeb1321bda4';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select count(*) as count
+                             from zen_categories
+                             where parent_id = '2';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select count(*) as total
+                         from zen_products p, zen_products_to_categories p2c
+                         where p.products_id = p2c.products_id
+                         and p.products_status = '1'
+                         and p2c.categories_id = '2';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '2';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select count(*) as count
+                             from zen_categories
+                             where parent_id = '3';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select count(*) as total
+                         from zen_products p, zen_products_to_categories p2c
+                         where p.products_id = p2c.products_id
+                         and p.products_status = '1'
+                         and p2c.categories_id = '3';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '3';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select count(*) as count
+                             from zen_categories
+                             where parent_id = '4';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select count(*) as total
+                         from zen_products p, zen_products_to_categories p2c
+                         where p.products_id = p2c.products_id
+                         and p.products_status = '1'
+                         and p2c.categories_id = '4';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '4';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select count(*) as count
+                             from zen_categories
+                             where parent_id = '1';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select count(*) as total
+                         from zen_products p, zen_products_to_categories p2c
+                         where p.products_id = p2c.products_id
+                         and p.products_status = '1'
+                         and p2c.categories_id = '1';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select categories_id
+                               from zen_categories
+                               where parent_id = '1';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select product_type_id from zen_product_types_to_category where category_id='2';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select product_type_id from zen_product_types_to_category where category_id='3';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select product_type_id from zen_product_types_to_category where category_id='4';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select product_type_id from zen_product_types_to_category where category_id='1';
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select s.products_id from zen_specials s where s.status= 1 limit 1;
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select p.products_id
+                                 from zen_products p
+                                 where p.products_status = 1  limit 1;
+
+
+
+I AM HERE login
+sidebox: categories
+
+Explain 
+select products_id from zen_featured where status= 1 limit 1;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select * from zen_ezpages where status_footer = 1 and footer_sort_order > 0 order by footer_sort_order, pages_title;
+
+
+
+I AM HERE login
+sidebox: 
+
+Explain 
+select count(*) as total
+              from zen_sessions
+              where sesskey = 'e4tq2ot1hp4crur7n4c9qndnp6';
+

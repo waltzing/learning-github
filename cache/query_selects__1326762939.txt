@@ -1,0 +1,29 @@
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_key, configuration_description, date_added,
+                                        last_modified, use_function, set_function
+                                 from zen_configuration
+                                 where configuration_id = '455';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+SELECT * from zen_project_version WHERE project_version_key = 'Zen-Cart Database' ORDER BY project_version_date_applied DESC LIMIT 1;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+              from zen_sessions
+              where sesskey = '0jtgq428krmo12fso5jkvg8032';
+

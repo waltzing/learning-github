@@ -1,0 +1,304 @@
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+SELECT project_version_major, project_version_minor FROM zen_project_version WHERE project_version_key = 'Zen-Cart Database';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_value from zen_configuration where configuration_key='MODULE_PAYMENT_INSTALLED';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_value from zen_configuration where configuration_key='MODULE_SHIPPING_INSTALLED';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_coupon_gv_queue where release_flag='N';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select configuration_group_id as cgID, 
+                                                       configuration_group_title as cgTitle 
+                                                from zen_configuration_group 
+                                                where visible = '1' order by sort_order;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select pov.products_options_values_id, pov.products_options_values_name, pov2po.products_options_id, pov.products_options_values_sort_order from zen_products_options_values pov left join zen_products_options_values_to_products_options pov2po on pov.products_options_values_id = pov2po.products_options_values_id     left join zen_products_options po on pov2po.products_options_id = po.products_options_id where pov.language_id = '1' and po.language_id = '1' and po.language_id = pov.language_id and pov2po.products_options_values_id !='0' order by  po.products_options_name, LPAD(pov.products_options_values_sort_order,11,'0'), pov.products_options_values_name;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select pov.products_options_values_id, pov.products_options_values_name, pov2po.products_options_id, pov.products_options_values_sort_order from zen_products_options_values pov left join zen_products_options_values_to_products_options pov2po on pov.products_options_values_id = pov2po.products_options_values_id     left join zen_products_options po on pov2po.products_options_id = po.products_options_id where pov.language_id = '1' and po.language_id = '1' and po.language_id = pov.language_id and pov2po.products_options_values_id !='0' order by  po.products_options_name, LPAD(pov.products_options_values_sort_order,11,'0'), pov.products_options_values_name LIMIT 0, 10;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_options_name
+                                    from zen_products_options
+                                    where products_options_id = '2'
+                                    and language_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select max(products_options_values_id) + 1
+                                           as next_id from zen_products_options_values;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_options_name
+                                    from zen_products_options
+                                    where products_options_id = '2'
+                                    and language_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select max(products_options_values_id) + 1
+                                           as next_id from zen_products_options_values;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_options_name
+                                    from zen_products_options
+                                    where products_options_id = '2'
+                                    and language_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select max(products_options_values_id) + 1
+                                           as next_id from zen_products_options_values;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_options_name
+                                    from zen_products_options
+                                    where products_options_id = '1'
+                                    and language_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select max(products_options_values_id) + 1
+                                           as next_id from zen_products_options_values;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_options_name
+                                    from zen_products_options
+                                    where products_options_id = '1'
+                                    and language_id = '1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select max(products_options_values_id) + 1
+                                           as next_id from zen_products_options_values;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_options_id, products_options_name, products_options_type
+                                      from zen_products_options
+                                      where language_id = '1' and products_options_type !='1' and products_options_type !='4'
+                                      order by products_options_name;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_products_options where language_id = '1' and products_options_name !='' and products_options_type !='1' and products_options_type !='4' order by products_options_name;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select * from zen_products_options_values where language_id = '1' and products_options_values_id !='0' order by products_options_values_name;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_options_id
+                    from zen_products_options_values_to_products_options
+                    where products_options_values_id='5';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_options_name
+                      from zen_products_options
+                      where products_options_id='1' and language_id='1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_options_id
+                    from zen_products_options_values_to_products_options
+                    where products_options_values_id='1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_options_name
+                      from zen_products_options
+                      where products_options_id='2' and language_id='1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_options_id
+                    from zen_products_options_values_to_products_options
+                    where products_options_values_id='4';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_options_name
+                      from zen_products_options
+                      where products_options_id='1' and language_id='1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_options_id
+                    from zen_products_options_values_to_products_options
+                    where products_options_values_id='2';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_options_name
+                      from zen_products_options
+                      where products_options_id='2' and language_id='1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_options_id
+                    from zen_products_options_values_to_products_options
+                    where products_options_values_id='3';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select products_options_name
+                      from zen_products_options
+                      where products_options_id='2' and language_id='1';
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+SELECT * from zen_project_version WHERE project_version_key = 'Zen-Cart Database' ORDER BY project_version_date_applied DESC LIMIT 1;
+
+
+
+I AM HERE 
+sidebox: 
+
+Explain 
+select count(*) as total
+              from zen_sessions
+              where sesskey = 'sjpnkna68m0abarrvae3jti620';
+
