@@ -4,7 +4,7 @@
  *
  * @package classes
  * @copyright Copyright 2003-2006 Zen Cart Development Team
- * @copyright Portions Copyright 2003 osCommerce
+ * @copyright Portions Copyright 2003 osCommerceadfasdfasfasdf
  * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
  * @version $Id: breadcrumb.php 3147 2006-03-10 00:43:57Z drbyte $
  */

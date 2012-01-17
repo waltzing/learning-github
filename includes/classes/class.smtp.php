@@ -5,7 +5,7 @@
 // Version 1.02
 //
 // Define an SMTP class that can be used to connect
-// and communicate with any SMTP server. It implements
+// and communicate with any SMTP server. It implementsqwerqwer
 // all the SMTP functions defined in RFC821 except TURN.
 //
 // Author: Chris Ryan
